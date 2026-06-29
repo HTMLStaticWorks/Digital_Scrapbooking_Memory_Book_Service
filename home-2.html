@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions & News | MemoryNest Studio</title>
+    <link class="favicon-icon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖼️</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        orange: {
+                            50: '#FFF9F7',  // Cream Background
+                            100: '#FDE5D2', // Light Peach
+                            200: '#F7C6A3', // Peach Accent
+                            300: '#D1C4E9', // Light Lavender
+                            400: '#B39DDB', // Lavender Secondary
+                            500: '#EC8F9C', // Lighter Pinkish Red
+                            600: '#E97A92', // Primary Pinkish Red
+                            700: '#D8536E', // Darker Pinkish Red
+                            800: '#B83E56',
+                            900: '#8B263B',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 dark:bg-black text-gray-800 dark:text-gray-100 antialiased transition-colors duration-300">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 h-[70px] flex items-center">
+        <div class="container mx-auto px-4 md:px-6 w-full flex justify-between items-center">
+            
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i class="fa-solid fa-images text-orange-600 text-2xl group-hover:text-orange-700 transition-colors"></i>
+                <span class="font-heading text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">MemoryNest Studio</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden xl:flex items-center">
+                <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium">Home</a>
+                <a href="home-2.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium">Home 2</a>
+                <a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium">About</a>
+                <a href="services.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium">Services</a>
+                <a href="menu.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium">Themes</a>
+                <a href="events.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium">Events</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button onclick="toggleTheme()" class="text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-lg"></i>
+                </button>
+                <button onclick="toggleRTL()" class="text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle RTL/LTR">
+                    <span class="rtl-icon-ltr font-bold text-xs">RTL</span>
+                    <span class="rtl-icon-rtl hidden font-bold text-xs">LTR</span>
+                </button>
+                <div class="hidden xl:flex gap-3 ml-4">
+                    <a href="signup.html" class="bg-orange-600 hover:bg-orange-700 text-white font-medium text-sm px-4 h-10 flex items-center justify-center rounded-md transition-colors shadow-sm">Sign Up</a>
+                </div>
+                
+                <!-- Mobile Menu btn -->
+                <button onclick="toggleMobileMenu()" class="xl:hidden text-gray-600 dark:text-gray-300 p-2 text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-overlay" class="hidden fixed inset-0 bg-black/50 z-40 transition-opacity" onclick="toggleMobileMenu()"></div>
+    
+    <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-black z-50 transform -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl overflow-y-auto">
+        <div class="p-6 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i class="fa-solid fa-images text-orange-600 text-xl group-hover:text-orange-700"></i>
+                <span class="font-heading text-xl font-bold text-gray-900 dark:text-white">MemoryNest Studio</span>
+            </a>
+            <button onclick="toggleMobileMenu()" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 focus:outline-none">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+        </div>
+        <nav class="p-4 flex flex-col space-y-2">
+            <a href="index.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">Home</a>
+            <a href="home-2.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">Home 2</a>
+            <a href="about.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">About</a>
+            <a href="services.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">Services</a>
+            <a href="menu.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">Themes</a>
+            <a href="events.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">Events</a>
+            
+            <div class="h-px bg-gray-200 dark:bg-gray-900 my-4 mx-4"></div>
+            <button onclick="toggleRTL()" class="flex items-center gap-3 px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors w-full">
+                <i class="fa-solid fa-right-left text-sm"></i>
+                <span class="rtl-icon-ltr">Switch to RTL</span>
+                <span class="rtl-icon-rtl hidden">Switch to LTR</span>
+            </button>
+            <a href="signup.html" class="block mx-4 py-3 bg-orange-600 hover:bg-orange-700 text-white font-medium text-center rounded-md transition-colors shadow-sm">Sign Up</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-[70px]">
+        <!-- Promotional Hero Section -->
+        <section class="relative flex items-center justify-center py-20 md:py-32 overflow-hidden text-center">
+            <div class="absolute inset-0 z-0 pointer-events-none" style="background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center;"></div>
+            <div class="absolute inset-0 z-0 bg-black/60 pointer-events-none"></div>
+            
+            <div class="container mx-auto px-4 z-10 max-w-4xl">
+                <span class="inline-block py-1 px-3 rounded text-orange-300 bg-black/50 backdrop-blur-sm border border-orange-500/30 font-bold tracking-wider uppercase text-xs mb-6">Seasonal Promo</span>
+                <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    The Annual Family Archive Project
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                    Preserve 5 key family milestones this season and receive a premium linen slipcase, a free photo cleaning kit, and custom layout upgrades. Get 10% off your first subscription order when you join today.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="signup.html" class="w-full sm:w-auto px-8 h-12 flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-teal-950 font-bold rounded-md shadow-lg transition-transform hover:-translate-y-1">
+                        Join the Challenge
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Staff Picks -->
+        <section class="py-20 bg-white dark:bg-black">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <span class="text-orange-700 dark:text-orange-400 font-bold tracking-wider uppercase text-sm mb-4 block">Curated For You</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Designer Selections</h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Our layout designers and binding specialists have curated recommended pairings of layouts, sizes, and cover fabrics.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+                    <!-- Pairing Card 1 -->
+                    <div class="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 hover-lift flex flex-col md:flex-row">
+                        <div class="w-full md:w-2/5 aspect-[3/4] md:aspect-auto bg-gray-200 dark:bg-gray-700">
+                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=600&auto=format&fit=crop" alt="Vintage Family Album" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 w-full md:w-3/5 flex flex-col justify-center">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-600 overflow-hidden border-2 border-white dark:border-gray-800 shadow">
+                                    <img src="https://i.pravatar.cc/150?img=32" alt="Designer Elena" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">Elena</h4>
+                                    <p class="text-xs text-orange-600 dark:text-orange-400 uppercase tracking-widest font-semibold">Lead Layout Designer</p>
+                                </div>
+                            </div>
+                            <h3 class="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-3">Linen Cover & Vintage Theme</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 text-sm leading-relaxed">"A vintage family heritage scrapbook pairs perfectly with our heavy-weight natural linen cover. I recommend our soft peach color accents to highlight old sepia prints."</p>
+                            <a href="services.html" class="inline-flex items-center text-orange-600 dark:text-orange-400 font-bold hover:text-orange-700 dark:hover:text-orange-300 transition-colors">
+                                Shop this Pairing <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pairing Card 2 -->
+                    <div class="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 hover-lift flex flex-col md:flex-row">
+                        <div class="w-full md:w-2/5 aspect-[3/4] md:aspect-auto bg-gray-200 dark:bg-gray-700">
+                            <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=600&auto=format&fit=crop" alt="Premium Layflat Album" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 w-full md:w-3/5 flex flex-col justify-center">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-600 overflow-hidden border-2 border-white dark:border-gray-800 shadow">
+                                    <img src="https://i.pravatar.cc/150?img=11" alt="Binding Specialist Marcus" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">Marcus</h4>
+                                    <p class="text-xs text-orange-600 dark:text-orange-400 uppercase tracking-widest font-semibold">Binding Specialist</p>
+                                </div>
+                            </div>
+                            <h3 class="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-3">Leather Spine & Layflat Pages</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 text-sm leading-relaxed">"If you're compiling panoramic landscape travel shots, you need our seamless layflat binding. Our genuine leather spine ensures the book opens flat and lasts for 100+ years."</p>
+                            <a href="services.html" class="inline-flex items-center text-orange-600 dark:text-orange-400 font-bold hover:text-orange-700 dark:hover:text-orange-300 transition-colors">
+                                Shop this Pairing <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loyalty Program Spotlight -->
+        <section class="py-20 bg-orange-50 dark:bg-gray-900 border-y border-orange-100 dark:border-gray-700">
+            <div class="container mx-auto px-4 text-center max-w-4xl">
+                <i class="fa-solid fa-medal text-5xl text-orange-500 mb-6 drop-shadow-sm"></i>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">MemoryNest Rewards</h2>
+                <p class="text-gray-700 dark:text-gray-300 text-lg mb-10 leading-relaxed">
+                    Earn Nest Points for every design service and print album order. Redeem points for free slipcases, gold foil titles, and priority layout consultations. Joining is completely free.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-white dark:bg-black p-6 rounded-xl shadow border border-gray-100 dark:border-gray-700 hover-lift">
+                        <div class="text-orange-600 dark:text-orange-500 text-2xl mb-3"><i class="fa-solid fa-camera-retro"></i></div>
+                        <h4 class="font-bold text-gray-900 dark:text-white mb-2">Order & Earn</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">10 Points per $1 spent</p>
+                    </div>
+                    <div class="bg-white dark:bg-black p-6 rounded-xl shadow border border-gray-100 dark:border-gray-700 hover-lift">
+                        <div class="text-orange-600 dark:text-orange-500 text-2xl mb-3"><i class="fa-solid fa-pen-fancy"></i></div>
+                        <h4 class="font-bold text-gray-900 dark:text-white mb-2">Design & Review</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">50 Points per design feedback</p>
+                    </div>
+                    <div class="bg-white dark:bg-black p-6 rounded-xl shadow border border-gray-100 dark:border-gray-700 hover-lift">
+                        <div class="text-orange-600 dark:text-orange-500 text-2xl mb-3"><i class="fa-solid fa-gift"></i></div>
+                        <h4 class="font-bold text-gray-900 dark:text-white mb-2">Unlock Rewards</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">Free Gold Foil title at 500 Points</p>
+                    </div>
+                </div>
+                <a href="signup.html" class="inline-flex items-center justify-center px-8 h-12 bg-gray-900 hover:bg-gray-800 dark:bg-orange-600 dark:text-white dark:hover:bg-orange-700 text-white font-bold rounded-md shadow-lg transition-transform hover:-translate-y-1">
+                    Sign Up for Rewards
+                </a>
+            </div>
+        </section>
+
+        <!-- Blog/News Highlights -->
+        <section class="py-20 bg-white dark:bg-black">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-end mb-12 border-b border-gray-200 dark:border-gray-800 pb-4">
+                    <div>
+                        <h2 class="font-heading text-3xl font-bold text-gray-900 dark:text-white">Latest from Our Studio</h2>
+                    </div>
+                    <a href="#" class="hidden sm:inline-flex text-orange-600 dark:text-orange-400 font-bold hover:text-orange-700 transition-colors">
+                        View All Posts <i class="fa-solid fa-arrow-right ml-2 mt-1"></i>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <div class="group cursor-pointer">
+                        <div class="rounded-xl overflow-hidden mb-4 shadow-sm border border-gray-100 dark:border-gray-800 bg-gray-200 dark:bg-gray-900">
+                            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=800&auto=format&fit=crop" alt="Old photographs" class="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="text-xs text-orange-600 dark:text-orange-500 font-bold uppercase tracking-wider mb-2">Scrapbook Care</div>
+                        <h3 class="font-heading text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">Preserving Old Family Photos</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">Discover the best methods for handling, scanning, and digitalizing decades-old physical prints without damage.</p>
+                        <span class="text-xs text-gray-500 dark:text-gray-500 font-bold uppercase">Oct 10, 2026</span>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="group cursor-pointer">
+                        <div class="rounded-xl overflow-hidden mb-4 shadow-sm border border-gray-100 dark:border-gray-800 bg-gray-200 dark:bg-gray-900">
+                            <img src="https://i.pinimg.com/736x/0f/03/5f/0f035fb87b756349f6bd5dd28b1c8427.jpg" alt="Design layouts" class="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="text-xs text-orange-600 dark:text-orange-500 font-bold uppercase tracking-wider mb-2">Designer Tips</div>
+                        <h3 class="font-heading text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">Structuring Album Storyboards</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">We sit down with lead designer Elena to discuss layout storyboarding, pacing, and choosing focal photos.</p>
+                        <span class="text-xs text-gray-500 dark:text-gray-500 font-bold uppercase">Oct 05, 2026</span>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="group cursor-pointer">
+                        <div class="rounded-xl overflow-hidden mb-4 shadow-sm border border-gray-100 dark:border-gray-800 bg-gray-200 dark:bg-gray-900">
+                            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=800&auto=format&fit=crop" alt="Linen samples" class="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="text-xs text-orange-600 dark:text-orange-500 font-bold uppercase tracking-wider mb-2">Studio News</div>
+                        <h3 class="font-heading text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">Premium Linen Cover Options Expanded</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">Introducing five new earth-toned textured fabrics and gold-embossed patterns for our classic albums.</p>
+                        <span class="text-xs text-gray-500 dark:text-gray-500 font-bold uppercase">Sep 28, 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Feed -->
+        <section class="py-12 bg-gray-900 border-t border-gray-800 pb-0 overflow-hidden">
+            <div class="text-center mb-8 px-4">
+                <h2 class="font-heading text-2xl font-bold text-white mb-2">Follow Our Studio</h2>
+                <p class="text-gray-400 text-sm font-medium">@memoryneststudio</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-0">
+                <div class="aspect-square relative group overflow-hidden bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-brands fa-instagram text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="aspect-square relative group overflow-hidden bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1511556820780-d912e42b4980?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-brands fa-instagram text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="aspect-square relative group overflow-hidden bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-brands fa-instagram text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="aspect-square relative group overflow-hidden bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-brands fa-instagram text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="aspect-square relative group overflow-hidden hidden lg:block bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-brands fa-instagram text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="aspect-square relative group overflow-hidden hidden md:block bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-brands fa-instagram text-white text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - Global -->
+    <footer class="bg-white dark:bg-black text-gray-600 dark:text-gray-300 pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Info -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6 group inline-block">
+                        <i class="fa-solid fa-images text-orange-600 text-2xl group-hover:text-orange-700 transition-colors"></i>
+                        <span class="font-heading text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">MemoryNest Studio</span>
+                    </a>
+                    <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm leading-relaxed font-medium">
+                        Your custom haven for preserving life's beautiful milestones. Tell your stories through museum-quality albums.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-gray-900 dark:text-white text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors inline-block text-gray-500 dark:text-gray-400">Our Story</a></li>
+                        
+                        <li><a href="menu.html" class="hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors inline-block text-gray-500 dark:text-gray-400">Themes</a></li>
+                        <li><a href="events.html" class="hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors inline-block text-gray-500 dark:text-gray-400">Events</a></li>
+                        <li><a href="services.html" class="hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors inline-block text-gray-500 dark:text-gray-400">Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Hours -->
+                <div>
+                    <h4 class="font-heading font-bold text-gray-900 dark:text-white text-lg mb-6">Visit Us</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-orange-600"></i>
+                            <span>456 Scrapbook Lane<br>Memory City, MC 90210</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-orange-600"></i>
+                            <a href="tel:5551234567" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">(555) 123-4567</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-orange-600"></i>
+                            <a href="mailto:hello@memoryneststudio.com" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">hello@memoryneststudio.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="font-heading font-bold text-gray-900 dark:text-white text-lg mb-6">Newsletter</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-4 font-medium">Subscribe for styling workshops, new design theme releases, and premium discount codes.</p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md text-gray-900 dark:text-white focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600 transition-colors shadow-inner" required>
+                        <button type="submit" class="w-full px-4 h-12 flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-md transition-colors shadow-sm">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 dark:text-gray-400 font-medium">
+                <p>&copy; 2026 MemoryNest Studio. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Javascript -->
+    <script src="script.js"></script>
+</body>
+</html>

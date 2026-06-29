@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom scrollbar to avoid overlapping fixed header */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #FFF9F7; 
+}
+.dark ::-webkit-scrollbar-track {
+    background: #1F1F24;
+}
+::-webkit-scrollbar-thumb {
+    background: #E97A92; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #B39DDB; 
+}
+
+/* Smooth transitions */
+.smooth-transition {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Lift Effect */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dark .hover-lift:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure equal spacing across all navbar links */
+header nav {
+    gap: 1.5rem;
+}
+
+/* ============================================
+   SCROLL ANIMATION SYSTEM
+   ============================================ */
+
+/* --- Base: all animated elements start hidden --- */
+[data-animate] {
+    opacity: 0;
+    will-change: transform, opacity;
+}
+[data-animate].is-visible {
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    animation-duration: 0.75s;
+}
+
+/* ---- 1. HERO: Fade + slide down (stagger via delay) ---- */
+@keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-32px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+[data-animate="fade-down"].is-visible { animation-name: fadeSlideDown; }
+
+/* ---- 2. CARDS: Cascade flip up from below ---- */
+@keyframes flipUp {
+    from { opacity: 0; transform: translateY(60px) rotateX(20deg); }
+    to   { opacity: 1; transform: translateY(0)  rotateX(0deg); }
+}
+[data-animate="flip-up"].is-visible { animation-name: flipUp; animation-duration: 0.7s; }
+
+/* ---- 3. SPLIT SECTION: Slide from left ---- */
+@keyframes slideLeft {
+    from { opacity: 0; transform: translateX(-80px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+[data-animate="slide-left"].is-visible { animation-name: slideLeft; animation-duration: 0.8s; }
+
+/* ---- 4. SPLIT SECTION: Slide from right ---- */
+@keyframes slideRight {
+    from { opacity: 0; transform: translateX(80px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+[data-animate="slide-right"].is-visible { animation-name: slideRight; animation-duration: 0.8s; }
+
+/* ---- 5. EVENTS: Zoom in with slight scale-up ---- */
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.85); }
+    to   { opacity: 1; transform: scale(1); }
+}
+[data-animate="zoom-in"].is-visible { animation-name: zoomIn; animation-duration: 0.65s; }
+
+/* ---- 6. TESTIMONIALS: Tilt reveal (rotate from off-axis) ---- */
+@keyframes tiltReveal {
+    from { opacity: 0; transform: rotate(-4deg) translateY(40px); }
+    to   { opacity: 1; transform: rotate(0deg)  translateY(0); }
+}
+[data-animate="tilt-in"].is-visible { animation-name: tiltReveal; animation-duration: 0.7s; }
+
+/* ---- 7. FOOTER: Wave rise (fade up) ---- */
+@keyframes waveRise {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+[data-animate="wave-rise"].is-visible { animation-name: waveRise; animation-duration: 0.6s; }
+
+/* ---- 8. SECTION HEADINGS: Clip reveal ---- */
+@keyframes clipReveal {
+    from { opacity: 0; clip-path: inset(0 100% 0 0); }
+    to   { opacity: 1; clip-path: inset(0 0% 0 0); }
+}
+[data-animate="clip-reveal"].is-visible { animation-name: clipReveal; animation-duration: 0.9s; }
+
+/* ---- 9. PULSE GLOW on CTA cards ---- */
+@keyframes pulseGlow {
+    from { opacity: 0; transform: scale(0.9); box-shadow: 0 0 0 0 rgba(233, 122, 146, 0); }
+    60%  { box-shadow: 0 0 30px 12px rgba(233, 122, 146, 0.25); }
+    to   { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(233, 122, 146, 0); }
+}
+[data-animate="pulse-glow"].is-visible { animation-name: pulseGlow; animation-duration: 0.9s; }
+
+/* --- Stagger delays for child elements --- */
+.stagger-children [data-animate]:nth-child(1) { animation-delay: 0s; }
+.stagger-children [data-animate]:nth-child(2) { animation-delay: 0.12s; }
+.stagger-children [data-animate]:nth-child(3) { animation-delay: 0.24s; }
+.stagger-children [data-animate]:nth-child(4) { animation-delay: 0.36s; }
+.stagger-children [data-animate]:nth-child(5) { animation-delay: 0.48s; }
+.stagger-children [data-animate]:nth-child(6) { animation-delay: 0.60s; }
+
+/* Explicit delay utilities */
+[data-delay="100"] { animation-delay: 0.1s; }
+[data-delay="200"] { animation-delay: 0.2s; }
+[data-delay="300"] { animation-delay: 0.3s; }
+[data-delay="400"] { animation-delay: 0.4s; }
+[data-delay="500"] { animation-delay: 0.5s; }
+[data-delay="600"] { animation-delay: 0.6s; }
