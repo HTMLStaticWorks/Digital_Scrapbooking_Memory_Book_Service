@@ -88,3 +88,18 @@ document.addEventListener('DOMContentLoaded', () => {
         animatedEls.forEach(el => observer.observe(el));
     }
 });
+
+// Toggle Password Visibility
+function togglePasswordVisibility(inputId, buttonEl) {
+    const input = document.getElementById(inputId);
+    const icon = buttonEl.querySelector('i');
+    if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    }
+}

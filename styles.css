@@ -53,6 +53,24 @@ header nav {
     gap: 1.5rem;
 }
 
+/* Prevent brand name from wrapping on mobile */
+header a .font-heading,
+#mobile-menu a .font-heading {
+    white-space: nowrap;
+}
+
+/* Reduce brand name size on mobile */
+@media (max-width: 767px) {
+    header a .font-heading {
+        font-size: 0.9rem;
+    }
+}
+
+/* Hide entire RTL toggle button (icon + text) inside mobile/tablet menu */
+#mobile-menu button[onclick="toggleRTL()"] {
+    display: none;
+}
+
 /* ============================================
    SCROLL ANIMATION SYSTEM
    ============================================ */
@@ -147,3 +165,13 @@ header nav {
 [data-delay="400"] { animation-delay: 0.4s; }
 [data-delay="500"] { animation-delay: 0.5s; }
 [data-delay="600"] { animation-delay: 0.6s; }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

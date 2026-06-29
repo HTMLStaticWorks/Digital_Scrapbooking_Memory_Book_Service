@@ -63,11 +63,11 @@
 
             <!-- Actions -->
             <div class="flex items-center gap-4">
-                <button onclick="toggleTheme()" class="text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Light/Dark Theme">
+                <button onclick="toggleTheme()" class="w-10 h-10 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Light/Dark Theme">
                     <i class="fa-solid fa-moon dark:hidden text-lg"></i>
                     <i class="fa-solid fa-sun hidden dark:block text-lg"></i>
                 </button>
-                <button onclick="toggleRTL()" class="text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle RTL/LTR">
+                <button onclick="toggleRTL()" class="w-10 h-10 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle RTL/LTR">
                     <span class="rtl-icon-ltr font-bold text-xs">RTL</span>
                     <span class="rtl-icon-rtl hidden font-bold text-xs">LTR</span>
                 </button>
@@ -147,6 +147,46 @@
             </div>
         </section>
 
+        <!-- How It Works Section -->
+        <section class="py-20 bg-orange-50/30 dark:bg-gray-950 border-y border-orange-100/50 dark:border-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <span data-animate="clip-reveal" class="text-orange-700 dark:text-orange-400 font-bold tracking-wider uppercase text-sm mb-4 block">The Process</span>
+                    <h2 data-animate="clip-reveal" data-delay="150" class="font-heading text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">How MemoryNest Works</h2>
+                    <p data-animate="fade-down" data-delay="300" class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">We turn your digital collections into professionally printed, museum-grade books in three simple steps.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto relative">
+                    <!-- Step 1 -->
+                    <div data-animate="flip-up" data-delay="100" class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 rounded-2xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-3xl font-bold mb-6 shadow-sm border border-orange-200/50 dark:border-orange-900/50 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-gray-900 dark:text-white mb-3">1. Upload Photos</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed max-w-xs">Securely upload photos directly from your phone, Google Photos, or cloud storage to our portal.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div data-animate="flip-up" data-delay="250" class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 rounded-2xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-3xl font-bold mb-6 shadow-sm border border-orange-200/50 dark:border-orange-900/50 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-gray-900 dark:text-white mb-3">2. Expert Design</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed max-w-xs">Our designers arrange your photos with custom layouts, colors, and narratives matching your chosen theme.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div data-animate="flip-up" data-delay="400" class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 rounded-2xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-3xl font-bold mb-6 shadow-sm border border-orange-200/50 dark:border-orange-900/50 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-gray-900 dark:text-white mb-3">3. Heirloom Delivery</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed max-w-xs">Approve your layout proof online, and we print, bind, and ship your luxury memory book directly to your door.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Featured Bestsellers Card Grid -->
         <section class="py-20 bg-white dark:bg-black">
             <div class="container mx-auto px-4">
@@ -162,7 +202,7 @@
                     <!-- Flex flex-col h-full to keep CTAs on same line -->
                     <div data-animate="flip-up" class="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover-lift flex flex-col h-full border border-gray-200 dark:border-gray-700">
                         <div class="aspect-[3/4] overflow-hidden bg-gray-200 dark:bg-gray-700 relative">
-                            <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=600&auto=format&fit=crop" alt="The Classic Layflat" class="w-full h-full object-cover">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7kmaWEiHHk67g3oIDIdJvNfdU1lI4pSHgDVcRbpnfDe-891aSLoMRzFzu&s=10" alt="The Classic Layflat" class="w-full h-full object-cover">
                             <!-- High contrast badging -->
                             <div class="absolute top-3 left-3 bg-white dark:bg-black text-xs font-bold px-2 py-1 rounded shadow-sm text-gray-900 dark:text-white">New</div>
                         </div>
@@ -186,7 +226,7 @@
                     <!-- Album Card 2 -->
                     <div data-animate="flip-up" class="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover-lift flex flex-col h-full border border-gray-200 dark:border-gray-700">
                         <div class="aspect-[3/4] overflow-hidden bg-gray-200 dark:bg-gray-700">
-                            <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=600&auto=format&fit=crop" alt="Baby's First Year" class="w-full h-full object-cover">
+                            <img src="https://denik.com/cdn/shop/files/LFC2263_The-Monarch_ol_FRONTCOVER.png?v=1749128920&width=2100" alt="Baby's First Year" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6 flex flex-col flex-grow text-center">
                             <div class="text-xs text-orange-700 dark:text-orange-400 font-bold mb-2 uppercase tracking-wide">Baby & Family</div>
@@ -246,7 +286,7 @@
             <div class="container mx-auto px-4">
                 <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
                     <div data-animate="slide-left" class="lg:w-1/2 w-full rounded-2xl overflow-hidden shadow-2xl relative order-2 lg:order-1 hover-lift">
-                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1000&auto=format&fit=crop" alt="Custom Gold Foil Embossing" class="w-full h-[400px] lg:h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+                        <img src="https://d1o785do8fyxgx.cloudfront.net/the_fold/articles/thumbnail_images/000/000/521/full/0421_fold_scrapbooking_hpg.jpg?1619455073" alt="Custom Gold Foil Embossing" class="w-full h-[400px] lg:h-[450px] object-cover hover:scale-105 transition-transform duration-700">
                         <div class="absolute bottom-6 left-6 bg-white/90 dark:bg-black/90 backdrop-blur-md p-4 rounded-lg shadow-lg border border-gray-100 dark:border-gray-700">
                             <h4 class="font-heading font-bold text-gray-900 dark:text-white">Gold Foil Embossing</h4>
                             <p class="text-sm text-orange-600 dark:text-orange-400 font-bold">Handcrafted Finishes</p>
@@ -268,6 +308,47 @@
                                 View Design Themes <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
                             </a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality & Archival Standards Grid -->
+        <section class="py-20 bg-white dark:bg-black">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <span data-animate="clip-reveal" class="text-orange-700 dark:text-orange-400 font-bold tracking-wider uppercase text-sm mb-4 block">Craftsmanship</span>
+                    <h2 data-animate="clip-reveal" data-delay="150" class="font-heading text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Built to Last Generations</h2>
+                    <p data-animate="fade-down" data-delay="300" class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">We use premium materials and time-honored binding techniques to ensure your stories stand the test of time.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto stagger-children">
+                    <!-- Standard 1 -->
+                    <div data-animate="flip-up" class="p-8 bg-orange-50/30 dark:bg-gray-900/50 rounded-2xl border border-orange-100/50 dark:border-gray-800 hover-lift">
+                        <div class="text-orange-600 dark:text-orange-400 text-3xl mb-6"><i class="fa-solid fa-book-open"></i></div>
+                        <h3 class="font-heading text-lg font-bold text-gray-900 dark:text-white mb-3">Layflat Binding</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Pages lie completely flat when opened, allowing panoramic photos to print seamlessly across two pages with zero gutter loss.</p>
+                    </div>
+
+                    <!-- Standard 2 -->
+                    <div data-animate="flip-up" class="p-8 bg-orange-50/30 dark:bg-gray-900/50 rounded-2xl border border-orange-100/50 dark:border-gray-800 hover-lift">
+                        <div class="text-orange-600 dark:text-orange-400 text-3xl mb-6"><i class="fa-solid fa-leaf"></i></div>
+                        <h3 class="font-heading text-lg font-bold text-gray-900 dark:text-white mb-3">Acid-Free Paper</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Museum-grade, thick matte papers that are acid-free to prevent yellowing, degradation, or fading over decades.</p>
+                    </div>
+
+                    <!-- Standard 3 -->
+                    <div data-animate="flip-up" class="p-8 bg-orange-50/30 dark:bg-gray-900/50 rounded-2xl border border-orange-100/50 dark:border-gray-800 hover-lift">
+                        <div class="text-orange-600 dark:text-orange-400 text-3xl mb-6"><i class="fa-solid fa-sliders"></i></div>
+                        <h3 class="font-heading text-lg font-bold text-gray-900 dark:text-white mb-3">Color Correction</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Our design team reviews and hand-calibrates every single photograph's colors, contrast, and brightness prior to printing.</p>
+                    </div>
+
+                    <!-- Standard 4 -->
+                    <div data-animate="flip-up" class="p-8 bg-orange-50/30 dark:bg-gray-900/50 rounded-2xl border border-orange-100/50 dark:border-gray-800 hover-lift">
+                        <div class="text-orange-600 dark:text-orange-400 text-3xl mb-6"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 class="font-heading text-lg font-bold text-gray-900 dark:text-white mb-3">Lifetime Guarantee</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We stand behind our materials. If there are any manufacturing or structural defects, we will replace your book at any time.</p>
                     </div>
                 </div>
             </div>
@@ -368,7 +449,7 @@
     </main>
 
     <!-- Footer - Global -->
-    <footer data-animate="wave-rise" class="bg-white dark:bg-black text-gray-600 dark:text-gray-300 pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+    <footer data-animate="wave-rise" class="bg-white dark:bg-black text-gray-600 dark:text-gray-300 pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 rtl:text-right">
         <div class="container mx-auto px-4 md:px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- Brand Info -->
@@ -381,7 +462,7 @@
                     <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm leading-relaxed">
                         Your custom haven for preserving life's beautiful milestones. Tell your stories through museum-quality albums.
                     </p>
-                    <div class="flex space-x-4">
+                    <div class="flex gap-4">
                         <!-- Social Hover Effects explicitly high contrast -->
                         <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-facebook-f"></i></a>
@@ -437,7 +518,7 @@
 
             <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 dark:text-gray-400 font-medium">
                 <p>&copy; 2026 MemoryNest Studio. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
+                <div class="flex gap-6 mt-4 md:mt-0">
                     <a href="#" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Privacy Policy</a>
                     <a href="#" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Terms of Service</a>
                 </div>

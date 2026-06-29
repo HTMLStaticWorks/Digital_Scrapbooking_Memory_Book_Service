@@ -61,11 +61,11 @@
 
             <!-- Actions -->
             <div class="flex items-center gap-4">
-                <button onclick="toggleTheme()" class="text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <button onclick="toggleTheme()" class="w-10 h-10 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
                     <i class="fa-solid fa-moon dark:hidden text-lg"></i>
                     <i class="fa-solid fa-sun hidden dark:block text-lg"></i>
                 </button>
-                <button onclick="toggleRTL()" class="text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle RTL/LTR">
+                <button onclick="toggleRTL()" class="w-10 h-10 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle RTL/LTR">
                     <span class="rtl-icon-ltr font-bold text-xs">RTL</span>
                     <span class="rtl-icon-rtl hidden font-bold text-xs">LTR</span>
                 </button>
@@ -128,7 +128,7 @@
         <section class="py-20 md:py-28">
             <div class="container mx-auto px-4">
                 <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
-                    <div data-animate="slide-right" class="lg:w-1/2 text-center lg:text-left">
+                    <div data-animate="slide-right" class="w-full lg:w-1/2 text-center lg:text-left">
                         <span class="text-orange-700 dark:text-orange-400 font-bold tracking-wider uppercase text-sm mb-4 block">Our Story</span>
                         
                         <h1 class="font-heading text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
@@ -141,12 +141,10 @@
                             We believed that preserving memory books is an art. From wedding days and baby's first steps to family heritage documents, we custom structure every book. Today, we work with sustainable paper suppliers and local bindery craftsmen to create heirloom keepsakes.
                         </p>
                     </div>
-                    <div data-animate="slide-left" class="lg:w-1/2 relative">
+                    <div data-animate="slide-left" class="w-full lg:w-1/2 relative">
                         <div class="rounded-2xl overflow-hidden shadow-2xl relative z-10">
                             <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1000&auto=format&fit=crop" alt="Our Studio space" class="w-full h-[400px] object-cover">
                         </div>
-                        <!-- Decorative background block -->
-                        <div class="absolute -bottom-6 -right-6 w-full h-full bg-orange-200 dark:bg-orange-900/40 rounded-2xl z-0 transform"></div>
                     </div>
                 </div>
             </div>
@@ -196,7 +194,7 @@
                     <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Meet the Designers & Archivists</h2>
                 </div>
                 
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                     <!-- Team Member 1 -->
                     <div class="bg-white dark:bg-black rounded-lg overflow-hidden shadow border border-gray-100 dark:border-gray-700 text-center hover-lift p-6">
                         <div class="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-orange-500">
@@ -299,7 +297,7 @@
     </main>
 
     <!-- Footer - Global -->
-    <footer class="bg-white dark:bg-black text-gray-600 dark:text-gray-300 pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+    <footer class="bg-white dark:bg-black text-gray-600 dark:text-gray-300 pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 rtl:text-right">
         <div class="container mx-auto px-4 md:px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- Brand Info -->
@@ -311,7 +309,7 @@
                     <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm leading-relaxed font-medium">
                         Your custom haven for preserving life's beautiful milestones. Tell your stories through museum-quality albums.
                     </p>
-                    <div class="flex space-x-4">
+                    <div class="flex gap-4">
                         <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-twitter"></i></a>
@@ -365,7 +363,7 @@
 
             <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 dark:text-gray-400 font-medium">
                 <p>&copy; 2026 MemoryNest Studio. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
+                <div class="flex gap-6 mt-4 md:mt-0">
                     <a href="#" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Privacy Policy</a>
                     <a href="#" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Terms of Service</a>
                 </div>

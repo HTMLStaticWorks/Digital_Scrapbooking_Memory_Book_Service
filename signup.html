@@ -42,12 +42,12 @@
 
     <!-- Top Navigation (Outside Container) -->
     <header class="w-full px-6 py-4 flex justify-end items-center relative z-20">
-        <div class="flex flex-col items-end gap-1">
-            <button onclick="toggleTheme()" class="text-gray-500 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 p-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-all" aria-label="Toggle Dark Mode">
+        <div class="flex items-center gap-4">
+            <button onclick="toggleTheme()" class="w-10 h-10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-all" aria-label="Toggle Dark Mode">
                 <i class="fa-solid fa-moon dark:hidden text-lg"></i>
                 <i class="fa-solid fa-sun hidden dark:block text-lg"></i>
             </button>
-            <button onclick="toggleRTL()" class="text-gray-500 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 px-2 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-all font-bold text-xs" aria-label="Toggle RTL/LTR">
+            <button onclick="toggleRTL()" class="w-10 h-10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-all font-bold text-xs" aria-label="Toggle RTL/LTR">
                 <span class="rtl-icon-ltr">RTL</span>
                 <span class="rtl-icon-rtl hidden">LTR</span>
             </button>
@@ -105,12 +105,15 @@
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <i class="fa-solid fa-lock text-gray-400"></i>
                             </div>
-                            <input type="password" id="password" required placeholder="Create a strong password" class="pl-10 w-full px-4 py-3 bg-gray-50 dark:bg-black border border-gray-200 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900 dark:text-white transition shadow-sm">
+                            <input type="password" id="password" required placeholder="Create a strong password" class="pl-10 pr-10 w-full px-4 py-3 bg-gray-50 dark:bg-black border border-gray-200 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900 dark:text-white transition shadow-sm">
+                            <button type="button" onclick="togglePasswordVisibility('password', this)" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none" aria-label="Toggle password visibility">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
                         </div>
                         <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Must be at least 8 characters long.</p>
                     </div>
 
-                    <div class="flex items-start">
+                    <div class="flex items-start rtl:justify-end" dir="ltr">
                         <input id="terms" type="checkbox" required class="mt-1 h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded bg-gray-50 dark:bg-black dark:border-gray-700 dark:checked:bg-orange-600 shrink-0">
                         <label for="terms" class="ml-2 block text-sm text-gray-700 dark:text-gray-300">
                             I agree to the <a href="#" class="text-orange-600 hover:text-orange-700 dark:text-orange-400 dark:hover:text-orange-300 underline">Terms of Service</a> and <a href="#" class="text-orange-600 hover:text-orange-700 dark:text-orange-400 dark:hover:text-orange-300 underline">Privacy Policy</a>.
