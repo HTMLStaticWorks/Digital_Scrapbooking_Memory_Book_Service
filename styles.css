@@ -175,3 +175,14 @@ header a .font-heading,
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
+/* RTL: reverse icon order in gift section list items */
+[dir="rtl"] .rtl-icon-list li {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+/* RTL: reverse icon order in event type labels and status badges */
+[dir="rtl"] .rtl-event-tag {
+    flex-direction: row-reverse;
+}
