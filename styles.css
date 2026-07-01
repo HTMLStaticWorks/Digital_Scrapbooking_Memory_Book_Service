@@ -61,7 +61,9 @@ header a .font-heading,
 
 /* Reduce brand name size on mobile */
 @media (max-width: 767px) {
-    header a .font-heading {
+    header a .font-heading,
+    #mobile-menu a .font-heading,
+    footer a .font-heading {
         font-size: 0.9rem;
     }
 }
