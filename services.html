@@ -41,35 +41,42 @@
 <body class="bg-gray-50 dark:bg-black text-gray-800 dark:text-gray-100 antialiased transition-colors duration-300">
 
     <!-- Header / Navbar -->
-    <header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 h-[70px] flex items-center">
+    <header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 h-[60px] flex items-center">
         <div class="container mx-auto px-4 md:px-6 w-full flex justify-between items-center">
             
             <a href="index.html" class="flex items-center gap-2 group">
-                <i class="fa-solid fa-images text-orange-600 text-2xl group-hover:text-orange-700 transition-colors"></i>
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-600 transform group-hover:scale-105 transition-transform duration-300">
+    <rect x="4" y="8" width="18" height="18" rx="4" class="fill-orange-100 dark:fill-orange-900/50" />
+    <rect x="10" y="6" width="18" height="18" rx="4" class="fill-orange-600" />
+    <path d="M14 18L17.5 14.5L19 16L22.5 12.5L25 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="16" cy="11.5" r="1.5" fill="white"/>
+</svg>
                 <span class="font-heading text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Memoir</span>
             </a>
 
             <!-- Desktop Nav -->
             <nav class="hidden xl:flex items-center">
-                <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium">Home</a>
-                <a href="home-2.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium">Home 2</a>
-                <a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium">About</a>
-                <a href="services.html" class="nav-link text-orange-600 dark:text-orange-400 font-semibold">Services</a>
-                <a href="menu.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium">Themes</a>
-                <a href="events.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 font-medium">Events</a>
+                <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 font-medium">Home</a>
+                <a href="home-2.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 font-medium">Promotions</a>
+                <a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 font-medium">About</a>
+                <a href="services.html" class="nav-link text-orange-600 font-semibold">Services</a>
+                <a href="menu.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 font-medium">Themes</a>
+                <a href="events.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 font-medium">Workshops</a>
+            <a href="contact.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-orange-600 font-medium">Contact</a>
             </nav>
 
             <!-- Actions -->
             <div class="flex items-center gap-4">
-                <button onclick="toggleTheme()" class="w-10 h-10 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <button onclick="toggleTheme()" class="w-10 h-10 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-orange-600 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
                     <i class="fa-solid fa-moon dark:hidden text-lg"></i>
                     <i class="fa-solid fa-sun hidden dark:block text-lg"></i>
                 </button>
-                <button onclick="toggleRTL()" class="w-10 h-10 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle RTL/LTR">
+                <button onclick="toggleRTL()" class="w-10 h-10 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-orange-600 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle RTL/LTR">
                     <span class="rtl-icon-ltr font-bold text-xs">RTL</span>
                     <span class="rtl-icon-rtl hidden font-bold text-xs">LTR</span>
                 </button>
                 <div class="hidden xl:flex gap-3 ml-4">
+                    <a href="login.html" class="border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white dark:hover:text-white font-medium text-sm px-4 h-10 flex items-center justify-center rounded-md transition-colors shadow-sm">Login</a>
                     <a href="signup.html" class="bg-orange-600 hover:bg-orange-700 text-white font-medium text-sm px-4 h-10 flex items-center justify-center rounded-md transition-colors shadow-sm">Sign Up</a>
                 </div>
                 
@@ -85,7 +92,12 @@
     <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-black z-50 transform -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl overflow-y-auto">
         <div class="p-6 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2 group">
-                <i class="fa-solid fa-images text-orange-600 text-xl group-hover:text-orange-700"></i>
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-600 transform group-hover:scale-105 transition-transform duration-300">
+    <rect x="4" y="8" width="18" height="18" rx="4" class="fill-orange-100 dark:fill-orange-900/50" />
+    <rect x="10" y="6" width="18" height="18" rx="4" class="fill-orange-600" />
+    <path d="M14 18L17.5 14.5L19 16L22.5 12.5L25 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="16" cy="11.5" r="1.5" fill="white"/>
+</svg>
                 <span class="font-heading text-xl font-bold text-gray-900 dark:text-white">Memoir</span>
             </a>
             <button onclick="toggleMobileMenu()" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 focus:outline-none">
@@ -94,18 +106,22 @@
         </div>
         <nav class="p-4 flex flex-col space-y-2">
             <a href="index.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">Home</a>
-            <a href="home-2.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">Home 2</a>
+            <a href="home-2.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">Promotions</a>
             <a href="about.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">About</a>
             <a href="services.html" class="nav-link block px-4 py-3 rounded-md text-orange-600 bg-orange-50 dark:bg-gray-900 font-semibold transition-colors">Services</a>
             <a href="menu.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">Themes</a>
-            <a href="events.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">Events</a>
+            <a href="events.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">Workshops</a>
+            <a href="contact.html" class="nav-link block px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors">Contact</a>
             <div class="h-px bg-gray-200 dark:bg-gray-900 my-4 mx-4"></div>
             <button onclick="toggleRTL()" class="flex items-center gap-3 px-4 py-3 rounded-md text-gray-700 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-gray-800 hover:text-orange-600 font-medium transition-colors w-full">
                 <i class="fa-solid fa-right-left text-sm"></i>
                 <span class="rtl-icon-ltr">Switch to RTL</span>
                 <span class="rtl-icon-rtl hidden">Switch to LTR</span>
             </button>
-            <a href="signup.html" class="block mx-4 py-3 bg-orange-600 hover:bg-orange-700 text-white font-medium text-center rounded-md transition-colors shadow-sm">Sign Up</a>
+            <div class="flex flex-col gap-3 mx-4 mb-4">
+                <a href="login.html" class="block w-full py-3 border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white dark:hover:text-white font-medium text-center rounded-md transition-colors shadow-sm">Login</a>
+                <a href="signup.html" class="block w-full py-3 bg-orange-600 hover:bg-orange-700 text-white font-medium text-center rounded-md transition-colors shadow-sm">Sign Up</a>
+            </div>
         </nav>
     </div>
 
@@ -117,7 +133,7 @@
             <div class="absolute inset-0 z-0 pointer-events-none" style="background-image: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center;"></div>
             <div class="absolute inset-0 z-0 bg-black/60 pointer-events-none"></div>
             <div class="container mx-auto px-4 text-center relative z-10">
-                <h1 data-animate="fade-down" class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Crafting Your Legacy</h1>
+                <h1 data-animate="fade-down" class="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold mb-6">Crafting Your Legacy</h1>
                 <p data-animate="fade-down" data-delay="200" class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
                     From professional photo sorting to custom layouts, our design services are designed to turn your digital memories into premium physical books.
                 </p>
@@ -132,16 +148,14 @@
                     
                     <!-- Photo Curation & Sorting -->
                     <div data-animate="flip-up" class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 hover-lift flex flex-col h-full">
+                        <img src="https://images.aeonmedia.co/images/25203526-bfe9-4b76-a06c-ccc211065387/books-library_0045.jpeg?top=616&left=0&cropWidth=1792&cropHeight=1008&width=1200&quality=75&format=jpg" alt="Photo Curation & Sorting" class="w-full h-48 object-cover">
                         <div class="p-8 flex flex-col flex-grow text-center">
-                            <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900/50 text-orange-600 dark:text-orange-400 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
-                                <i class="fa-solid fa-images"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-4">Photo Curation & Sorting</h3>
+                            <h3 class="font-heading text-2xl font-semibold text-gray-900 dark:text-white mb-4">Photo Curation & Sorting</h3>
                             <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow leading-relaxed">
                                 Struggling to find the best photos from thousands of phone shots? Our design team will review, select, and organize your images into a beautiful, logical narrative structure.
                             </p>
                             <div class="mt-auto">
-                                <a href="#contactForm" class="inline-flex items-center justify-center w-full px-6 py-3 border border-orange-600 text-orange-600 dark:border-orange-500 dark:text-orange-400 font-bold rounded-md hover:bg-orange-600 hover:text-white dark:hover:bg-orange-500 dark:hover:text-white transition-colors">
+                                <a href="#contactForm" class="inline-flex items-center justify-center w-full px-6 py-3 border border-orange-600 text-orange-600 font-bold rounded-md hover:bg-orange-600 hover:text-white dark:hover:text-white transition-colors">
                                     Start Curating
                                 </a>
                             </div>
@@ -150,16 +164,14 @@
 
                     <!-- Bespoke Page Layout Design -->
                     <div data-animate="flip-up" class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 hover-lift flex flex-col h-full">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHmXNohEsNkSJuFpfOIGJtxGt_RRZchTWK47H0s72e0g&s=10" alt="Bespoke Page Layout Design" class="w-full h-48 object-cover">
                         <div class="p-8 flex flex-col flex-grow text-center">
-                            <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900/50 text-orange-600 dark:text-orange-400 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
-                                <i class="fa-solid fa-palette"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-4">Bespoke Page Layout Design</h3>
+                            <h3 class="font-heading text-2xl font-semibold text-gray-900 dark:text-white mb-4">Bespoke Page Layout Design</h3>
                             <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow leading-relaxed">
                                 Collaborate directly with our designers to build beautiful custom pages. From maps and timelines to travel routes and family trees, we'll design layouts that tell your story.
                             </p>
                             <div class="mt-auto">
-                                <a href="#contactForm" class="inline-flex items-center justify-center w-full px-6 py-3 border border-orange-600 text-orange-600 dark:border-orange-500 dark:text-orange-400 font-bold rounded-md hover:bg-orange-600 hover:text-white dark:hover:bg-orange-500 dark:hover:text-white transition-colors">
+                                <a href="#contactForm" class="inline-flex items-center justify-center w-full px-6 py-3 border border-orange-600 text-orange-600 font-bold rounded-md hover:bg-orange-600 hover:text-white dark:hover:text-white transition-colors">
                                     Request Layout Design
                                 </a>
                             </div>
@@ -168,16 +180,14 @@
 
                     <!-- Premium Printing & Binding -->
                     <div data-animate="flip-up" class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 hover-lift flex flex-col h-full">
+                        <img src="https://www.qinprinting.com/wp-content/uploads/2024/12/custom-size-book-printing.webp" alt="Premium Printing & Binding" class="w-full h-48 object-cover">
                         <div class="p-8 flex flex-col flex-grow text-center">
-                            <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900/50 text-orange-600 dark:text-orange-400 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
-                                <i class="fa-solid fa-book-bookmark"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-4">Premium Printing & Binding</h3>
+                            <h3 class="font-heading text-2xl font-semibold text-gray-900 dark:text-white mb-4">Premium Printing & Binding</h3>
                             <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow leading-relaxed">
                                 We offer museum-grade printing using archival inks, layflat binding, and custom fabric covers like linen, silk, or genuine leather to ensure your legacy keepsakes last for generations.
                             </p>
                             <div class="mt-auto">
-                                <a href="#contactForm" class="inline-flex items-center justify-center w-full px-6 py-3 border border-orange-600 text-orange-600 dark:border-orange-500 dark:text-orange-400 font-bold rounded-md hover:bg-orange-600 hover:text-white dark:hover:bg-orange-500 dark:hover:text-white transition-colors">
+                                <a href="#contactForm" class="inline-flex items-center justify-center w-full px-6 py-3 border border-orange-600 text-orange-600 font-bold rounded-md hover:bg-orange-600 hover:text-white dark:hover:text-white transition-colors">
                                     Select Binding Styles
                                 </a>
                             </div>
@@ -186,16 +196,14 @@
 
                     <!-- Gift Curation & Packaging -->
                     <div data-animate="flip-up" class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 hover-lift flex flex-col h-full">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMKmB6Jv3tAlQ_IIHqivA0_MxrCjiV_8vEXB9Cl8AwWQ&s=10" alt="Gift Curation & Packaging" class="w-full h-48 object-cover">
                         <div class="p-8 flex flex-col flex-grow text-center">
-                            <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900/50 text-orange-600 dark:text-orange-400 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
-                                <i class="fa-solid fa-gift"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-4">Gift Curation & Packaging</h3>
+                            <h3 class="font-heading text-2xl font-semibold text-gray-900 dark:text-white mb-4">Gift Curation & Packaging</h3>
                             <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow leading-relaxed">
                                 Turn your memory books into unforgettable gifts. We offer custom handmade gift boxes, personalized insert cards, and direct premium delivery to surprise your loved ones.
                             </p>
                             <div class="mt-auto">
-                                <a href="#contactForm" class="inline-flex items-center justify-center w-full px-6 py-3 border border-orange-600 text-orange-600 dark:border-orange-500 dark:text-orange-400 font-bold rounded-md hover:bg-orange-600 hover:text-white dark:hover:bg-orange-500 dark:hover:text-white transition-colors">
+                                <a href="#contactForm" class="inline-flex items-center justify-center w-full px-6 py-3 border border-orange-600 text-orange-600 font-bold rounded-md hover:bg-orange-600 hover:text-white dark:hover:text-white transition-colors">
                                     Design a Gift Package
                                 </a>
                             </div>
@@ -206,76 +214,207 @@
             </div>
         </section>
 
-        <!-- Dynamic Form Section (Contact for Services) -->
-        <section id="contactForm" class="py-20 bg-orange-50 dark:bg-gray-900 border-t border-orange-100 dark:border-gray-700">
-            <div class="container mx-auto px-4 max-w-4xl">
-                <div class="bg-white dark:bg-black rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-                    <!-- Sidebar info -->
-                    <div class="bg-orange-600 text-white p-8 lg:p-10 md:w-[38%] lg:w-1/3 flex flex-col justify-between">
-                        <div>
-                            <h3 class="font-heading text-2xl font-bold mb-6">Let's build your story together.</h3>
-                            <p class="text-orange-100 text-sm leading-relaxed mb-8">
-                                Whether you're looking to design a single milestone album or a complete family heritage collection, our designers are here to assist you.
-                            </p>
-                        </div>
-                        <div class="space-y-4 text-sm font-medium">
-                            <div class="flex items-start gap-3">
-                                <i class="fa-solid fa-location-dot mt-1 text-orange-200"></i>
-                                <span>456 Scrapbook Lane<br>Memory City, MC 90210</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-phone text-orange-200"></i>
-                                <span>(555) 123-4567</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-envelope text-orange-200"></i>
-                                <span class="break-all">services@Memoirstudio.com</span>
-                            </div>
+        <!-- The Creation Process -->
+        <section class="py-20 bg-orange-50/50 dark:bg-gray-950 border-y border-orange-100 dark:border-gray-800">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-16">
+                    <span data-animate="clip-reveal" class="text-orange-700 font-bold tracking-wider uppercase text-sm mb-4 block">Our Workflow</span>
+                    <h2 data-animate="clip-reveal" data-delay="150" class="font-heading text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-4">The Scrapbook Creation Process</h2>
+                    <p data-animate="fade-down" data-delay="300" class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">From messy digital folders to a pristine physical album, we handle the heavy lifting while keeping you in creative control.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative stagger-children">
+                    <!-- Step 1 -->
+                    <div data-animate="flip-up" class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 relative z-10 text-center hover-lift flex flex-col h-full">
+                        <div class="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 shadow-md">1</div>
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Consult & Upload</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 flex-grow">Book a call to discuss your vision, then securely upload your raw photo collection to our private portal.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div data-animate="flip-up" class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 relative z-10 text-center hover-lift flex flex-col h-full">
+                        <div class="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 shadow-md">2</div>
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Curation & Layout</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 flex-grow">Our designers filter out duplicates and arrange your best shots into a stunning, story-driven digital layout.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div data-animate="flip-up" class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 relative z-10 text-center hover-lift flex flex-col h-full">
+                        <div class="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 shadow-md">3</div>
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Review & Refine</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 flex-grow">Receive a digital proof. You can request unlimited revisions until every page looks exactly how you want it.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div data-animate="flip-up" class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 relative z-10 text-center hover-lift flex flex-col h-full">
+                        <div class="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6 shadow-md">4</div>
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Print & Deliver</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 flex-grow">We send the final design to our artisan bindery for museum-grade printing and hand-assembly before shipping.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customization Options -->
+        <section class="py-20 bg-white dark:bg-black">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-16">
+                    <span data-animate="clip-reveal" class="text-orange-700 font-bold tracking-wider uppercase text-sm mb-4 block">Make It Yours</span>
+                    <h2 data-animate="clip-reveal" data-delay="150" class="font-heading text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-4">Customization Options</h2>
+                    <p data-animate="fade-down" data-delay="300" class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Select the perfect materials and finishes to reflect the unique story within. We offer a wide range of premium upgrades.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
+                    <div data-animate="flip-up" class="bg-gray-50 dark:bg-gray-900 p-8 rounded-xl border border-gray-100 dark:border-gray-800 text-center hover-lift flex flex-col">
+                        <div class="text-orange-600 text-3xl mb-4"><i class="fa-solid fa-swatchbook"></i></div>
+                        <h4 class="font-semibold text-lg text-gray-900 dark:text-white mb-3">Cover Materials</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 flex-grow">Choose from Belgian linen, genuine top-grain leather, or custom photo-printed dust jackets available in over 20 colors.</p>
+                        <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-2 text-left bg-white dark:bg-black p-4 rounded-lg">
+                            <li><i class="fa-solid fa-check text-orange-500 mr-2"></i> Natural Linens</li>
+                            <li><i class="fa-solid fa-check text-orange-500 mr-2"></i> Italian Leathers</li>
+                            <li><i class="fa-solid fa-check text-orange-500 mr-2"></i> Velvet Finishes</li>
+                        </ul>
+                    </div>
+                    <div data-animate="flip-up" class="bg-gray-50 dark:bg-gray-900 p-8 rounded-xl border border-gray-100 dark:border-gray-800 text-center hover-lift flex flex-col">
+                        <div class="text-orange-600 text-3xl mb-4"><i class="fa-solid fa-stamp"></i></div>
+                        <h4 class="font-semibold text-lg text-gray-900 dark:text-white mb-3">Foil Embossing</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 flex-grow">Add a touch of elegance with customized metallic foil stamping for your cover title and spine.</p>
+                        <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-2 text-left bg-white dark:bg-black p-4 rounded-lg">
+                            <li><i class="fa-solid fa-check text-orange-500 mr-2"></i> 24k Gold Foil</li>
+                            <li><i class="fa-solid fa-check text-orange-500 mr-2"></i> Sterling Silver</li>
+                            <li><i class="fa-solid fa-check text-orange-500 mr-2"></i> Rose Gold</li>
+                        </ul>
+                    </div>
+                    <div data-animate="flip-up" class="bg-gray-50 dark:bg-gray-900 p-8 rounded-xl border border-gray-100 dark:border-gray-800 text-center hover-lift flex flex-col">
+                        <div class="text-orange-600 text-3xl mb-4"><i class="fa-solid fa-file-lines"></i></div>
+                        <h4 class="font-semibold text-lg text-gray-900 dark:text-white mb-3">Paper & Binding</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 flex-grow">All our books feature acid-free archival paper. Opt for standard bindings or seamless layflat pages.</p>
+                        <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-2 text-left bg-white dark:bg-black p-4 rounded-lg">
+                            <li><i class="fa-solid fa-check text-orange-500 mr-2"></i> Matte Art Paper</li>
+                            <li><i class="fa-solid fa-check text-orange-500 mr-2"></i> Photo Lustre</li>
+                            <li><i class="fa-solid fa-check text-orange-500 mr-2"></i> Panoramic Layflat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memory Book Themes -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-950 border-y border-gray-200 dark:border-gray-800">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-16">
+                    <span data-animate="clip-reveal" class="text-orange-700 font-bold tracking-wider uppercase text-sm mb-4 block">Aesthetics</span>
+                    <h2 data-animate="clip-reveal" data-delay="150" class="font-heading text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-4">Memory Book Themes</h2>
+                    <p data-animate="fade-down" data-delay="300" class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Choose a foundational layout theme, and our designers will adapt it to suit your specific photos and aesthetic preferences.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
+                    <div data-animate="flip-up" class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 hover-lift">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv8JC9WmUNqraDn9qFoExbnb9Ih1DHktnm52Wu__4wQaDzKI4_O7jIc7c&s=10" alt="Heritage Theme" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">Heritage</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Classic, timeless layouts with serif fonts and structured grids. Perfect for family histories and vintage photo restorations.</p>
                         </div>
                     </div>
+                    <div data-animate="flip-up" class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 hover-lift">
+                        <img src="https://i0.wp.com/thesefourwallsblog.com/wp-content/uploads/2024/09/The-Soft-Minimlist-Home-inside-4x5-1.jpg?ssl=1" alt="Minimalist Theme" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">Minimalist</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Editorial-style layouts with lots of negative space, sleek sans-serif fonts, and full-bleed image spreads for a modern look.</p>
+                        </div>
+                    </div>
+                    <div data-animate="flip-up" class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 hover-lift">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRy_CpJc8UCcl-Qzfo4cc4oPrUnjou31lZTGfSnbXmmQGhHtvp_y_kxlSm&s=10" alt="Whimsical Theme" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">Whimsical</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Playful layouts featuring subtle pastel backgrounds, overlapping images, and delicate script fonts. Great for baby books.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking & Ordering -->
+        <section class="py-20 bg-orange-600 text-white">
+            <div class="container mx-auto px-4 max-w-4xl text-center">
+                <span data-animate="clip-reveal" class="text-orange-200 font-bold tracking-wider uppercase text-sm mb-4 block">Get Started</span>
+                <h2 data-animate="clip-reveal" data-delay="150" class="font-heading text-3xl md:text-4xl font-semibold mb-6">How to Place an Order or Book a Consultation</h2>
+                <div data-animate="fade-down" data-delay="300" class="text-orange-50 text-lg leading-relaxed mb-10 space-y-4">
+                    <p>Every memory book project is unique, which is why we start with a personalized consultation.</p>
+                    <p><strong>Step 1:</strong> Fill out the Service Inquiry form below with your project details.<br>
+                    <strong>Step 2:</strong> A layout specialist will reach out within 24 hours to provide a quote or schedule a free 15-minute introductory call.<br>
+                    <strong>Step 3:</strong> Once approved, we will send you a secure link to upload your photos and we'll begin crafting your legacy!</p>
+                </div>
+                <div data-animate="fade-down" data-delay="450">
+                    <a href="#startProject" class="inline-flex items-center justify-center px-8 h-12 bg-white text-orange-600 font-bold rounded-full shadow-lg hover:bg-orange-50 transition-colors transform hover:-translate-y-1">Start Your Project Below <i class="fa-solid fa-arrow-down ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+                <!-- New Unique Layout Section: Start Your Project -->
+        <section id="startProject" class="py-24 bg-gray-50 dark:bg-gray-900 relative overflow-hidden border-t border-gray-200 dark:border-gray-800">
+            <!-- Decorative Background Element -->
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-orange-50 dark:bg-orange-900/10 rounded-full blur-3xl opacity-70 pointer-events-none"></div>
+            
+            <div class="container mx-auto px-4 max-w-7xl">
+                <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                     
-                    <!-- Form Area -->
-                    <div class="p-8 lg:p-10 md:w-[62%] lg:w-2/3">
-                        <h3 class="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-6">Service Inquiry</h3>
-                        <form class="space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">First Name</label>
-                                    <input type="text" class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900 dark:text-white shadow-sm transition">
+                    <!-- Left: Asymmetrical Image Composition -->
+                    <div class="w-full lg:w-1/2 relative order-2 lg:order-1" data-animate="slide-right">
+                        <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] max-w-md mx-auto lg:mx-0 border-8 border-white dark:border-gray-900 transform -rotate-3 hover:rotate-0 transition-transform duration-700">
+                            <img src="https://images.unsplash.com/photo-1604866830893-c13cafa515d5?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2t8ZW58MHx8MHx8fDA%3D" class="w-full h-full object-cover" alt="Crafting Memory Books">
+                        </div>
+                        <!-- Floating Accent Card -->
+                        <div class="absolute -bottom-8 -right-4 lg:-right-12 bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 z-20 max-w-[240px] hidden md:block" data-animate="fade-up" data-delay="300">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/50 rounded-full flex items-center justify-center text-orange-600 text-xl">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
                                 </div>
-                                <div>
-                                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Last Name</label>
-                                    <input type="text" class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900 dark:text-white shadow-sm transition">
+                                <h4 class="font-bold text-gray-900 dark:text-white text-lg">Bespoke</h4>
+                            </div>
+                            <p class="text-xs text-gray-600 dark:text-gray-400 font-medium">Every album is uniquely tailored to your story.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Typography & Timeline -->
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2" data-animate="slide-left">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-orange-600 font-bold tracking-widest uppercase text-xs mb-6 shadow-sm">Begin Your Journey</span>
+                        
+                        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 dark:text-white mb-10 leading-tight">
+                            Ready to preserve your legacy?
+                        </h2>
+                        
+                        <!-- Minimalist vertical steps -->
+                        <div class="space-y-8 mb-12 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-orange-600 before:to-transparent">
+                            <!-- Step 1 -->
+                            <div class="relative flex items-center group">
+                                <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white dark:border-gray-900 bg-orange-600 text-white shadow-lg shrink-0 font-bold z-10 text-xl transition-transform group-hover:scale-110">1</div>
+                                <div class="ml-6 p-5 rounded-xl bg-white dark:bg-black border border-gray-100 dark:border-gray-800 shadow-sm w-full transition-shadow group-hover:shadow-md">
+                                    <h4 class="font-bold text-gray-900 dark:text-white mb-1 text-lg">Consultation</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Book a free 15-minute call to discuss your vision.</p>
                                 </div>
                             </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
-                                    <input type="email" class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900 dark:text-white shadow-sm transition">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Service Needed</label>
-                                    <select class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900 dark:text-white shadow-sm transition">
-                                        <option value="" disabled selected>Select an option...</option>
-                                        <option value="curation">Photo Curation & Sorting</option>
-                                        <option value="design">Bespoke Page Layout Design</option>
-                                        <option value="printing">Premium Printing & Binding</option>
-                                        <option value="gifts">Gift Curation & Packaging</option>
-                                        <option value="other">Other Inquiry</option>
-                                    </select>
+                            
+                            <!-- Step 2 -->
+                            <div class="relative flex items-center group">
+                                <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white dark:border-gray-900 bg-orange-200 text-orange-800 shadow shrink-0 font-bold z-10 text-xl transition-transform group-hover:scale-110">2</div>
+                                <div class="ml-6 p-5 rounded-xl bg-white/50 dark:bg-black/50 border border-gray-100 dark:border-gray-800 w-full transition-shadow group-hover:shadow-md">
+                                    <h4 class="font-bold text-gray-900 dark:text-white mb-1 text-lg">Curation</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Securely upload your digital files for expert sorting.</p>
                                 </div>
                             </div>
-
-                            <div>
-                                <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Additional Details</label>
-                                <textarea rows="4" class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900 dark:text-white shadow-sm transition resize-y" placeholder="Please provide details about your project, estimated photo count, milestones, or timeline..."></textarea>
+                            
+                            <!-- Step 3 -->
+                            <div class="relative flex items-center group">
+                                <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white dark:border-gray-900 bg-orange-100 text-orange-600 shadow shrink-0 font-bold z-10 text-xl transition-transform group-hover:scale-110">3</div>
+                                <div class="ml-6 p-5 rounded-xl bg-white/50 dark:bg-black/50 border border-gray-100 dark:border-gray-800 w-full transition-shadow group-hover:shadow-md">
+                                    <h4 class="font-bold text-gray-900 dark:text-white mb-1 text-lg">Creation</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">We design, print, and deliver your hand-bound heirloom.</p>
+                                </div>
                             </div>
+                        </div>
 
-                            <button type="button" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-md shadow-lg transition-transform hover:-translate-y-1">
-                                Submit Inquiry
-                            </button>
-                        </form>
+                        <a href="mailto:services@memoirstudio.com" class="inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white font-bold px-10 h-14 rounded-full shadow-lg transition-all hover:shadow-orange-500/30 transform hover:-translate-y-1 w-full sm:w-auto text-lg">
+                            Email Us to Start <i class="fa-solid fa-arrow-right ml-3"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -286,39 +425,44 @@
     <!-- Footer - Global -->
     <footer class="bg-white dark:bg-black text-gray-600 dark:text-gray-300 pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300 rtl:text-right">
         <div class="container mx-auto px-4 md:px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-12">
                 <!-- Brand Info -->
-                <div>
+                <div class="lg:col-span-4 lg:pr-8">
                     <a href="index.html" class="flex items-center gap-2 mb-6 group">
-                        <i class="fa-solid fa-images text-orange-600 text-2xl group-hover:text-orange-700 transition-colors"></i>
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-600 transform group-hover:scale-105 transition-transform duration-300">
+    <rect x="4" y="8" width="18" height="18" rx="4" class="fill-orange-100 dark:fill-orange-900/50" />
+    <rect x="10" y="6" width="18" height="18" rx="4" class="fill-orange-600" />
+    <path d="M14 18L17.5 14.5L19 16L22.5 12.5L25 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="16" cy="11.5" r="1.5" fill="white"/>
+</svg>
                         <span class="font-heading text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Memoir</span>
                     </a>
                     <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm leading-relaxed font-medium">
                         Your custom haven for preserving life's beautiful milestones. Tell your stories through museum-quality albums.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-orange-600 hover:text-white dark:hover:text-white transition-all transform hover:-translate-y-1"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
                 </div>
 
                 <!-- Quick Links -->
-                <div>
-                    <h4 class="font-heading font-bold text-gray-900 dark:text-white text-lg mb-6">Quick Links</h4>
+                <div class="lg:col-span-2 lg:justify-self-center">
+                    <h4 class="font-heading font-semibold text-gray-900 dark:text-white text-lg mb-6">Quick Links</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="about.html" class="hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors inline-block text-gray-500 dark:text-gray-400">Our Story</a></li>
+                        <li><a href="about.html" class="hover:text-orange-600 font-medium transition-colors inline-block text-gray-500 dark:text-gray-400">Our Story</a></li>
                         
-                        <li><a href="menu.html" class="hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors inline-block text-gray-500 dark:text-gray-400">Themes</a></li>
-                        <li><a href="events.html" class="hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors inline-block text-gray-500 dark:text-gray-400">Events</a></li>
+                        <li><a href="menu.html" class="hover:text-orange-600 font-medium transition-colors inline-block text-gray-500 dark:text-gray-400">Themes</a></li>
+                        <li><a href="events.html" class="hover:text-orange-600 font-medium transition-colors inline-block text-gray-500 dark:text-gray-400">Workshops</a></li>
                         <li><a href="services.html" class="text-orange-600 font-semibold block">Services</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact & Hours -->
-                <div>
-                    <h4 class="font-heading font-bold text-gray-900 dark:text-white text-lg mb-6">Visit Us</h4>
+                <div class="lg:col-span-3">
+                    <h4 class="font-heading font-semibold text-gray-900 dark:text-white text-lg mb-6">Visit Us</h4>
                     <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400 font-medium">
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-location-dot mt-1 text-orange-600"></i>
@@ -326,18 +470,18 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-phone text-orange-600"></i>
-                            <a href="tel:5551234567" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">(555) 123-4567</a>
+                            <a href="tel:5551234567" class="hover:text-orange-600 transition-colors">(555) 123-4567</a>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-envelope text-orange-600"></i>
-                            <a href="mailto:hello@Memoirstudio.com" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">hello@Memoirstudio.com</a>
+                            <a href="mailto:hello@Memoirstudio.com" class="hover:text-orange-600 transition-colors">hello@Memoirstudio.com</a>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Newsletter -->
-                <div>
-                    <h4 class="font-heading font-bold text-gray-900 dark:text-white text-lg mb-6">Newsletter</h4>
+                <div class="lg:col-span-3">
+                    <h4 class="font-heading font-semibold text-gray-900 dark:text-white text-lg mb-6">Newsletter</h4>
                     <p class="text-gray-500 dark:text-gray-400 text-sm mb-4 font-medium">Subscribe for styling workshops, new design theme releases, and premium discount codes.</p>
                     <form class="flex flex-col gap-3">
                         <input type="email" placeholder="Your email address" class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md text-gray-900 dark:text-white focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600 transition-colors shadow-inner" required>
@@ -350,9 +494,10 @@
 
             <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 dark:text-gray-400 font-medium">
                 <p>&copy; 2026 Memoir. All rights reserved.</p>
-                <div class="flex gap-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Terms of Service</a>
+                <div class="flex gap-6 mt-4 md:mt-0 items-center">
+                    <a href="services.html#contactForm" class="text-orange-600 font-bold hover:text-orange-700 transition-colors">Book Now</a>
+                    <a href="#" class="hover:text-orange-600 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-orange-600 transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
